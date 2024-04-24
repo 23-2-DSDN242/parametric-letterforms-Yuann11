@@ -34,7 +34,7 @@ const letterB = {
     fill(innerColor);
 
     rect(
-      posx +rectXOffset,
+      posx +letterB["rectXOffset"],
       posy - (letterB["rectHeight"] + 20) / 2,
       letterB["rectWidth"],
       letterB["rectHeight"]
@@ -42,7 +42,7 @@ const letterB = {
 
     fill(255);
     rect(
-      posx +rectXOffset-20,
+      posx +letterB["rectXOffset"]+30,
       posy - (letterB["rectHeight"] + 20) / 2 + 20,
       letterB["rectWidth"] / 2,
       letterB["rectHeight"] / 3,
@@ -53,7 +53,7 @@ const letterB = {
     );
 
     rect(
-      posx+ rectXOffset-20,
+      posx+ letterB["rectXOffset"]+30,
       posy - (letterB["rectHeight"] + 20) / 2 + 80,
       letterB["rectWidth"] / 2 + 15,
       letterB["rectHeight"] / 3,
@@ -65,10 +65,10 @@ const letterB = {
 
     fill(innerColor);
     ellipse(
-      posx + rectXOffset-10,
+      posx + letterB["rectXOffset"]-10,
       posy - (letterB["rectHeight"] + 20) / 2 + 10,
-      ellipseSize,
-      ellipseSize
+      letterB["ellipseSize"],
+      letterB["ellipseSize"]
     );
   },
 };
