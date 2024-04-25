@@ -1,188 +1,334 @@
+const letterSize = 50;
+const letterAngle =.872665;
+
 const alphabet = {
   "default": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 0
-  },
+    "p1": { "ang":0,   "dist":0},
+    "p2": { "ang":0,   "dist":0},
+    "p3": { "ang":0,   "dist":0},
+    "p4": { "ang":0,   "dist":0},
+    "p5": { "ang":0,   "dist":0},
+    "p6": { "ang":0,   "dist":0},
+    },
   "A": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "p1": { "ang": 0,   "dist": letterSize},
+    "p2": { "ang": -129,   "dist": letterSize},
+    "p3": { "ang": 51,   "dist":.4414*(letterSize)},
+    "p4": { "ang": 0,   "dist": letterSize},
+    "p5": { "ang":  129,   "dist": letterSize},
+    "p6": { "ang":-51,   "dist":.4414*(letterSize)},
   },
   "B": {
-    "size": 75,
-    "offsetx": 0,
-    "offsety": -70
+    "p1": { "ang":-37,   "dist": letterSize},
+    "p2": { "ang": 129,   "dist": letterSize},
+    "p3": { "ang": -148,   "dist": letterSize},
+    "p4": { "ang":-37,   "dist": letterSize},
+    "p5": { "ang":63,   "dist": letterSize},
+    "p6": { "ang": -148,   "dist": letterSize},
   },
   "C": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":-90,   "dist": letterSize},
+    "p2": { "ang": 158,   "dist": letterSize},
+    "p3": { "ang":-26,   "dist":.5704*letterSize},
+    "p4": { "ang": -90,   "dist": letterSize},
+    "p5": { "ang":26,   "dist": letterSize},
+    "p6": { "ang": 202,   "dist":.5704*letterSize},
   },
   "D": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":90,   "dist":.9*letterSize},
+    "p2": { "ang":-35,   "dist": letterSize},
+    "p3": { "ang": -150,   "dist": letterSize},
+    "p4": { "ang":90,   "dist":.32*letterSize},
+    "p5": { "ang":-35,   "dist": letterSize},
+    "p6": { "ang": -150,   "dist": letterSize},
   },
   "E": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":-90,   "dist":.8*letterSize},
+    "p2": { "ang":19,   "dist": letterSize},
+    "p3": { "ang": 160,   "dist": letterSize},
+    "p4": { "ang":90,   "dist": letterSize},
+    "p5": { "ang":-35,   "dist":.5*letterSize},
+    "p6": { "ang": -150,   "dist":.5*letterSize},
   },
   "F": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":-12,   "dist": letterSize},
+    "p2": { "ang": -170,   "dist": letterSize},
+    "p3": { "ang":-64,   "dist": letterSize},
+    "p4": { "ang":-12,   "dist": letterSize},
+    "p5": { "ang":-64,   "dist": letterSize},
+    "p6": { "ang":64,   "dist": letterSize},
   },
-  "G": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "G": {
+    "p1": { "ang":33,   "dist": letterSize},
+    "p2": { "ang": 153,   "dist": letterSize},
+    "p3": { "ang":-90,   "dist": letterSize},
+    "p4": { "ang": 153,   "dist": letterSize},
+    "p5": { "ang": 180,   "dist":.6131*letterSize},
+    "p6": { "ang": 90,   "dist": letterSize},
   },
-  "H": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "H": {
+    "p1": { "ang":-52,   "dist": letterSize},
+    "p2": { "ang":0,   "dist":0},
+    "p3": { "ang": -138,   "dist": letterSize},
+    "p4": { "ang":0,   "dist":0},
+    "p5": { "ang":52,   "dist": letterSize},
+    "p6": { "ang": 138,   "dist": letterSize},
   },
-  "I": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "I": {
+    "p1": { "ang":-32,   "dist": letterSize},
+    "p2": { "ang":0,   "dist": letterSize},
+    "p3": { "ang": 180,   "dist": letterSize},
+    "p4": { "ang":0,   "dist":.7*letterSize},
+    "p5": { "ang":28,   "dist":.6565*letterSize},
+    "p6": { "ang": 180,   "dist": letterSize},
   },
-  "J": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "J": {
+    "p1": { "ang": 148,   "dist": letterSize},
+    "p2": { "ang":0,   "dist": letterSize},
+    "p3": { "ang": 180,   "dist": letterSize},
+    "p4": { "ang": 148,   "dist": letterSize},
+    "p5": { "ang": -106,   "dist": letterSize},
+    "p6": { "ang": 180,   "dist": letterSize},
   },
-  "K": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "K": {
+    "p1": { "ang": -128,   "dist": letterSize},
+    "p2": { "ang": -90,   "dist":.7846*letterSize},
+    "p3": { "ang":64,   "dist": letterSize},
+    "p4": { "ang": 128,   "dist": letterSize},
+    "p5": { "ang":-64,   "dist": letterSize},
+    "p6": { "ang":-90,   "dist":.7846*letterSize},
   },
-  "L": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "L": {
+    "p1": { "ang": 130,   "dist": letterSize},
+    "p2": { "ang": -170,   "dist": letterSize},
+    "p3": { "ang": -130,   "dist": letterSize},
+    "p4": { "ang":-12,   "dist": letterSize},
+    "p5": { "ang": -170,   "dist": letterSize},
+    "p6": { "ang": -130,   "dist": letterSize},
   },
   "M": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang": 129-90,   "dist": letterSize},
+    "p2": { "ang":0,   "dist":.2*letterSize},
+    "p3": { "ang": -148-90,   "dist": letterSize},
+    "p4": { "ang":63-90,   "dist": letterSize},
+    "p5": { "ang":-37-90,   "dist": letterSize},
+    "p6": { "ang":0,   "dist":.2*letterSize},
   },
   "N": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":-52,   "dist": letterSize},
+    "p2": { "ang": 180,   "dist":.75*letterSize},
+    "p3": { "ang": -138,   "dist": letterSize},
+    "p4": { "ang": 180,   "dist":.75*letterSize},
+    "p5": { "ang":0,   "dist": 1*letterSize},
+    "p6": { "ang": 138,   "dist": letterSize},
   },
   "O": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang": 90,   "dist":.8*letterSize},
+    "p2": { "ang": 180,   "dist":.8*letterSize},
+    "p3": { "ang": -90,   "dist":.8*letterSize},
+    "p4": { "ang":90,   "dist":.8*letterSize},
+    "p5": { "ang": -90,   "dist":.8*letterSize},
+    "p6": { "ang":0,   "dist":.8*letterSize},
   },
   "P": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":0,   "dist": letterSize},
+    "p2": { "ang": -180,   "dist": letterSize},
+    "p3": { "ang":-50,   "dist": letterSize},
+    "p4": { "ang":0,   "dist": letterSize},
+    "p5": { "ang":0,   "dist":0},
+    "p6": { "ang":70,   "dist": letterSize},
   },
   "Q": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang": 150,   "dist": letterSize},
+    "p2": { "ang": 120,   "dist":.65*letterSize},
+    "p3": { "ang": 180,   "dist":.34*letterSize},
+    "p4": { "ang": 110,   "dist": letterSize},
+    "p5": { "ang":0,   "dist": letterSize},
+    "p6": { "ang": -110,   "dist": letterSize},
   },
   "R": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":60,   "dist": letterSize},
+    "p2": { "ang":-39,   "dist": letterSize},
+    "p3": { "ang": -141,   "dist": letterSize},
+    "p4": { "ang":0,   "dist":0},
+    "p5": { "ang":-90,   "dist":.6248*letterSize},
+    "p6": { "ang": 135,   "dist": letterSize},
   },
   "S": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":55,   "dist": letterSize},
+    "p2": { "ang":-45,   "dist": letterSize},
+    "p3": { "ang": -135,   "dist":.2*letterSize},
+    "p4": { "ang": 145,   "dist": letterSize},
+    "p5": { "ang": -135,   "dist": letterSize},
+    "p6": { "ang":55,   "dist":.2*letterSize},
   },
   "T": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "T": { "test" :0},
+    "p1": { "ang":29,   "dist":.7392*letterSize},
+    "p2": { "ang":-29,   "dist":.7392*letterSize},
+    "p3": { "ang": -180,   "dist": letterSize},
+    "p4": { "ang":-60,   "dist": letterSize},
+    "p5": { "ang":0,   "dist":.3*letterSize},
+    "p6": { "ang":60,   "dist": letterSize},
   },
   "U": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang": 180,   "dist": letterSize},
+    "p2": { "ang":51,   "dist": letterSize},
+    "p3": { "ang": 142,   "dist": letterSize},
+    "p4": { "ang": 180,   "dist": letterSize},
+    "p5": { "ang":-51,   "dist": letterSize},
+    "p6": { "ang": -142,   "dist": letterSize},
   },
   "V": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":  180,   "dist": letterSize},
+    "p2": { "ang":-51,   "dist": letterSize},
+    "p3": { "ang":  129,   "dist":.37*letterSize},
+    "p4": { "ang":  180,   "dist": letterSize},
+    "p5": { "ang": 51,   "dist": letterSize},
+    "p6": { "ang": -129,   "dist":.37*letterSize},
   },
   "W": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":37-90,   "dist": letterSize},
+    "p2": { "ang": -129-90,   "dist": letterSize},
+    "p3": { "ang": 148-90,   "dist": letterSize},
+    "p4": { "ang":37-90,   "dist": letterSize},
+    "p5": { "ang":-63-90,   "dist": letterSize},
+    "p6": { "ang": 148-90,   "dist": letterSize},
   },
   "X": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":55,   "dist": letterSize},
+    "p2": { "ang":-55,   "dist": letterSize},
+    "p3": { "ang":0,   "dist":0},
+    "p4": { "ang": 135,   "dist": letterSize},
+    "p5": { "ang": -135,   "dist": letterSize},
+    "p6": { "ang":0,   "dist":0},
   },
   "Y": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "p1": { "ang":12,   "dist":.67*letterSize},
+    "p2": { "ang": -170,   "dist": letterSize},
+    "p3": { "ang":64,   "dist": letterSize},
+    "p4": { "ang":12,   "dist":0},
+    "p5": { "ang":64,   "dist": letterSize},
+    "p6": { "ang":-54,   "dist": letterSize},
   },
   "Z": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+     "p1": { "ang":-55,   "dist": letterSize},
+    "p2": { "ang":45,   "dist": letterSize},
+    "p3": { "ang": 135,   "dist":.2*letterSize},
+    "p4": { "ang": -145,   "dist": letterSize},
+    "p5": { "ang": 135,   "dist": letterSize},
+    "p6": { "ang":-55,   "dist":.2*letterSize},
   },
   "0": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "p1": { "ang": 90,   "dist":.7*letterSize},
+    "p2": { "ang": 180,   "dist": letterSize},
+    "p3": { "ang": -90,   "dist":.7*letterSize},
+    "p4": { "ang":90,   "dist":.7*letterSize},
+    "p5": { "ang": -90,   "dist":.7*letterSize},
+    "p6": { "ang":0,   "dist": letterSize},
+  },  
+    "1": {
+    "p1": { "ang":0,   "dist": letterSize},
+    "p2": { "ang": 180,   "dist": letterSize},
+    "p3": { "ang":40,   "dist": letterSize},
+    "p4": { "ang":0,   "dist": letterSize},
+    "p5": { "ang":40,   "dist": letterSize},
+    "p6": { "ang":-60,   "dist": letterSize},
+  },  
+    "2": {
+    "p1": { "ang":-37-180,   "dist": letterSize},
+    "p2": { "ang": 100-180,   "dist": letterSize},
+    "p3": { "ang": -148-180,   "dist": letterSize},
+    "p4": { "ang":-37-180,   "dist": letterSize},
+    "p5": { "ang":37-180,   "dist": letterSize},
+    "p6": { "ang":-75-180,   "dist":.6*letterSize},
+  },  
+    "3": {
+    "p1": { "ang": 129,   "dist": letterSize},
+    "p2": { "ang":90,   "dist":.2*letterSize},
+    "p3": { "ang": -148,   "dist": letterSize},
+    "p4": { "ang":63,   "dist": letterSize},
+    "p5": { "ang":-37,   "dist": letterSize},
+    "p6": { "ang":90,   "dist":.2*letterSize},
   },
-  "1": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "4": {
+    "p1": { "ang":0,   "dist":-0.3*letterSize},
+    "p2": { "ang":0,   "dist": letterSize},
+    "p3": { "ang": -110,   "dist":.8*letterSize},
+    "p4": { "ang": 180,   "dist":-0.3*letterSize},
+    "p5": { "ang": 70,   "dist":.8*letterSize},
+    "p6": { "ang": 180,   "dist": letterSize},
+  },  
+    "5": {
+    "p1": { "ang":-37,   "dist": letterSize},
+    "p2": { "ang": 100,   "dist": letterSize},
+    "p3": { "ang": -148,   "dist": letterSize},
+    "p4": { "ang":-37,   "dist": letterSize},
+    "p5": { "ang":37,   "dist": letterSize},
+    "p6": { "ang":-75,   "dist":.6*letterSize},
+  },  
+    "6": {
+    "p1": { "ang":0,   "dist": letterSize},
+    "p2": { "ang": -180,   "dist": letterSize},
+    "p3": { "ang": -140,   "dist": letterSize},
+    "p4": { "ang":0,   "dist": -letterSize},
+    "p5": { "ang":0,   "dist":0},
+    "p6": { "ang": 120,   "dist": letterSize},
+  },  
+    "7": {
+    "p1": { "ang":12,   "dist": letterSize},
+    "p2": { "ang": 170,   "dist": letterSize},
+    "p3": { "ang":64,   "dist": letterSize},
+    "p4": { "ang":12,   "dist": letterSize},
+    "p5": { "ang":64,   "dist": letterSize},
+    "p6": { "ang":-64,   "dist": letterSize},
+  },  
+    "8": {
+    "p1": { "ang":40,   "dist": letterSize},
+    "p2": { "ang":-40,   "dist": letterSize},
+    "p3": { "ang":0,   "dist":0},
+    "p4": { "ang": 148,   "dist": letterSize},
+    "p5": { "ang": -148,   "dist": letterSize},
+    "p6": { "ang":0,   "dist":0},
+  },  
+    "9": {
+    "p1": { "ang":0,   "dist": letterSize},
+    "p2": { "ang": 180,   "dist": letterSize},
+    "p3": { "ang":50,   "dist": letterSize},
+    "p4": { "ang":0,   "dist": letterSize},
+    "p5": { "ang":0,   "dist":0},
+    "p6": { "ang":-70,   "dist": letterSize},
+  },   
+  "?": {
+    "p1": { "ang":70,   "dist": letterSize},
+    "p2": { "ang":-30,   "dist": letterSize},
+    "p3": { "ang": -180,   "dist":.5*letterSize},
+    "p4": { "ang": -170,   "dist": letterSize},
+    "p5": { "ang": -180,   "dist":.6*letterSize},
+    "p6": { "ang": 170,   "dist": letterSize},
   },
-  "2": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+  "!": {
+    "p1": { "ang":20,   "dist": letterSize},
+    "p2": { "ang":-20,   "dist": letterSize},
+    "p3": { "ang": -180,   "dist":.5*letterSize},
+    "p4": { "ang": -170,   "dist": letterSize},
+    "p5": { "ang": -180,   "dist":.6*letterSize},
+    "p6": { "ang": 170,   "dist": letterSize},
   },
-  "3": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+  "-": {
+    "p1": { "ang":90,   "dist":.3*letterSize},
+    "p2": { "ang":0,   "dist":.3*letterSize},
+    "p3": { "ang": -90,   "dist":.3*letterSize},
+    "p4": { "ang":-90,   "dist":.3*letterSize},
+    "p5": { "ang": 180,   "dist":.3*letterSize},
+    "p6": { "ang":90,   "dist":.3*letterSize},
   },
-  "4": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  },
-  "5": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  },
-  "6": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  },
-  "7": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  },
-  "8": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  },
-  "9": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
-  }
-
+  " ": {
+    "p1": { "ang":90,   "dist":0},
+    "p2": { "ang":0,   "dist":0},
+    "p3": { "ang": -90,   "dist":0},
+    "p4": { "ang":-90,   "dist":0},
+    "p5": { "ang": 180,   "dist":0},
+    "p6": { "ang":90,   "dist":0},
+  },          
 }
