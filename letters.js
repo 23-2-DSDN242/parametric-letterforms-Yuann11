@@ -243,13 +243,13 @@ const alphabet = {
     "p5": { "ang":37-180,   "dist": letterSize},
     "p6": { "ang":-75-180,   "dist":.6*letterSize},
   },  
-    "3": {
-    "p1": { "ang": 129,   "dist": letterSize},
-    "p2": { "ang":90,   "dist":.2*letterSize},
-    "p3": { "ang": -148,   "dist": letterSize},
-    "p4": { "ang":63,   "dist": letterSize},
-    "p5": { "ang":-37,   "dist": letterSize},
-    "p6": { "ang":90,   "dist":.2*letterSize},
+  "3": {
+    "p1": { "ang":37,  "dist": letterSize},
+    "p2": { "ang": -129,  "dist": letterSize},
+    "p3": { "ang": 148, "dist": letterSize},
+    "p4": { "ang":37,  "dist": letterSize},
+    "p5": { "ang":-63,  "dist": letterSize},
+     "p6": { "ang": 148, "dist": letterSize},
   },
     "4": {
     "p1": { "ang":0,   "dist":-0.3*letterSize},
