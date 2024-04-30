@@ -45,7 +45,7 @@ function drawLetter(letterData) {
 
   //stroke fill
   stroke(0);
- strokeWeight(4);
+  strokeWeight(4);
   //bottom fill
   fill(0, 209, 197);
 
