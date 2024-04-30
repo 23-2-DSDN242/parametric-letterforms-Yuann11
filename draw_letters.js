@@ -66,7 +66,7 @@ function drawLetter(letterData) {
   curveVertex(0 - p5.x, 0 - p5.y);
   curveVertex(0 - p6.x, 0 - p6.y);
   curveVertex(0 - p6.x, 0 - p6.y);
-  endShape();
+  endShape(CLOSE);
 
   pop();
 }
