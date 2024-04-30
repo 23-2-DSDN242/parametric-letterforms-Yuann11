@@ -44,8 +44,8 @@ function drawLetter(letterData) {
   translate(50,100+letterHeightDiff/2);
 
   //stroke fill
-  stroke(0, 209, 197);
-  // strokeWeight(10);
+  stroke(0);
+ strokeWeight(4);
   //bottom fill
   fill(0, 209, 197);
 
