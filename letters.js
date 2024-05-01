@@ -3,12 +3,12 @@ const letterAngle =.872665;
 
 const alphabet = {
   "default": {
-    "p1": { "ang":0,   "dist":0},
-    "p2": { "ang":0,   "dist":0},
-    "p3": { "ang":0,   "dist":0},
-    "p4": { "ang":0,   "dist":0},
-    "p5": { "ang":0,   "dist":0},
-    "p6": { "ang":0,   "dist":0},
+    "p1": { "ang": 0,   "dist": letterSize},
+    "p2": { "ang": -129,   "dist": letterSize},
+    "p3": { "ang": 51,   "dist":.4414*(letterSize)},
+    "p4": { "ang": 0,   "dist": letterSize},
+    "p5": { "ang":  129,   "dist": letterSize},
+    "p6": { "ang":-51,   "dist":.4414*(letterSize)},
     },
   "A": {
     "p1": { "ang": 0,   "dist": letterSize},

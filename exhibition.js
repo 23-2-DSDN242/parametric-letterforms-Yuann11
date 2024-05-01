@@ -41,7 +41,7 @@ let secondsPerWord = 8;
 let curSwapWord = 0;
 
 var defaultSwapWords = [
-  "ACTUALLY",
+  "PAPILLON",
   "1234567?",
   "EXPECTED",
   "PROPERTY",
@@ -112,6 +112,7 @@ function setup () {
   swapWords = swapWords.concat(defaultSwapWords);
   chosenLetters = [];
   let first_word = swapWords[0];
+  console.log(first_word)
   for(let i=0; i<first_word.length; i++) {
     chosenLetters.push(first_word[i]);
   }

@@ -2,11 +2,7 @@ const colorStroke = "#ffffff";
 const colourOpac = 200;
 
 var swapWords = [
-"-FOLDED-",
-"ORIGAMI!",
-"GEOMETRY",
-"TRIANGLE",
-"-ANGLES-"
+
 ]
 
 function drawLetter(letterData) {
@@ -45,7 +41,7 @@ function drawLetter(letterData) {
 
   //stroke fill
   stroke(0);
-  strokeWeight(4);
+  strokeWeight(0.5);
   //bottom fill
   fill(0, 209, 197);
 
